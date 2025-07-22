@@ -32,7 +32,7 @@ int _printf(const char *format, ...)
 		format++;
 		if (*format == '%')
 		{
-		if (*(format) == '\0')
+		if (*format == '\0')
 		{	
 			va_end(format_list);
 			return (-1);
