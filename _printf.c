@@ -54,6 +54,12 @@ int _printf(const char *format, ...)
 		write(1, string, strlen(string));
 		count = strlen(string) + count;
 		}
+		else
+		{
+			write(1, "%", 1);
+			write(1, format, 1);
+			count = 1 + 1;
+		}
 	}
 	format++;
 	}
