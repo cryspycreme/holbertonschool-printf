@@ -32,8 +32,6 @@ int _printf(const char *format, ...)
 		format++;
 		if (*format == '%')
 		{
-		if (*(format + 1) == '\0')
-                    break;
 		write(1, format, 1);
 		count++;
 		}
