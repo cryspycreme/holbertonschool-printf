@@ -30,13 +30,13 @@ int _printf(const char *format, ...)
 	else
 	{
 		format++;
+		if (*format == '\0')
+ 		{
+ 			va_end(format_list);
+ 			return (-1);
+		}
 		if (*format == '%')
 		{
-		if (*format == '\0')
-		{	
-			va_end(format_list);
-			return (-1);
-		}
 		write(1, "%", 1);
 		count++;
 		}
