@@ -13,7 +13,7 @@ int main(void)
     int len2;*/
     /*unsigned int ui;*/
     /*void *addr;*/
-
+	_printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0);
 	_printf("Thannie\n");
 	_printf("Character:[%c]\n", 'H');
 	_printf("String:[%s]\n", "I am a string !");
