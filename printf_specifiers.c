@@ -33,3 +33,41 @@ int print_string(const char *string)
 	s = write(1, string, strlen(string));
 	return (s);
 }
+
+/**
+ * print_d - prints a signed decimal integer.
+ *
+ * @number: number to be printed
+ * Return: no. bytes written.
+ */
+
+int print_d(int number)
+{
+	int len = 0;
+
+	if (number < 0)
+	{
+		len = len + print_char('-');
+		number = -number;
+	}
+	if (number >= 10)
+	{
+		len = len + print_d(number / 10);
+	}
+
+	len  = len + print_char(number % 10 + '0');
+
+	return (len);
+}
+
+/**
+ * print_i - prints a signed decimal integer.
+ *
+ * @number: number to be printed
+ * Return: no. bytes written.
+ */
+
+int print_i(int number)
+{
+	return (print_d(number));
+}
