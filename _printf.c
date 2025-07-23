@@ -37,10 +37,10 @@ int _printf(const char *format, ...)
 					length = length + print_char('%');
 					break;
 				case 'd':
-					length = length + print_dec(va_arg(args, int));
+					length = length + print_d(va_arg(args, int));
 					break;
 				case 'i':
-					length = length + print_int(va_arg(args, int));
+					length = length + print_i(va_arg(args, int));
 					break;
 				default:
 					length = length + write(1, "%", 1);
