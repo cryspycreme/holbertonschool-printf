@@ -5,12 +5,12 @@
 #include <unistd.h> /*write*/
 
 /**
-* _printf1- produces output according to a format
+* _printf- produces output according to a format
 * @format: determine format of input
 *
 * Return: no of ints printed exc null byte
 */
-int _printf1(const char *format, ...)
+int _printf(const char *format, ...)
 {
 	va_list args;
 	int length = 0;

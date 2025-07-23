@@ -9,7 +9,6 @@
 *
 * Return: no of chars printed exc null byte
 */
-
 int _printf(const char *format, ...)
 {
 	va_list args;
@@ -19,34 +18,37 @@ int _printf(const char *format, ...)
 	while (*format != '\0')
 	{
 		if (*format == '%')
-	{
-		format++;
-		if (*format == '\0')
 		{
-			va_end(args);
-			return (-1);
+			format++;
+			if (*format == '\0')
+			{
+				va_end(args);
+				return (-1);
+			}
+			switch (*format)
+			{
+				case 'c':
+					length = length + print_char(va_arg(args, int));
+					break;
+				case 's':
+					length = length + print_string(va_arg(args, const char *));
+					break;
+				case '%':
+					length = length + print_char('%');
+					break;
+				case 'd':
+					length = length + print_dec(va_arg(args, int));
+					break;
+				case 'i':
+					length = length + print_int(va_arg(args, int));
+					break;
+				default:
+					length = length + write(1, "%", 1);
+					length = length + write(1, format, 1);
+			}
 		}
-		switch (*format)
-		{
-			case 'c':
-				length = length + print_char(va_arg(args, int));
-				break;
-			case 's':
-				length = length + print_string(va_arg(args, const char *));
-				break;
-			case '%':
-				length = length + print_char('%');
-				break;
-			default:
-				length = length + write(1, "%", 1);
-				length = length + write(1, format, 1);
-				break;
-		}
-	}
 		else
-		{
 			length = length + print_char(*format);
-		}
 		format++;
 	}
 	va_end(args);
