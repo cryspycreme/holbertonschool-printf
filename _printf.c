@@ -1,6 +1,4 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
 #include <stdarg.h>
 #include <unistd.h>
 #include <string.h>
@@ -11,58 +9,46 @@
 *
 * Return: no of chars printed exc null byte
 */
+
 int _printf(const char *format, ...)
 {
-	int count = 0;
-	char c, *string;
-	va_list format_list;
+	va_list args;
+	int length = 0;
 
-	if (format == NULL)
-		return (-1);
-	va_start(format_list, format);
+	va_start(args, format);
+
 	while (*format != '\0')
 	{
-		if (*format != '%')
-	{
-		write(1, format, 1);
-		count++;
-	}
-	else
+		if (*format == '%')
 	{
 		format++;
 		if (*format == '\0')
- 		{
- 			va_end(format_list);
- 			return (-1);
-		}
-		if (*format == '%')
 		{
-		write(1, "%", 1);
-		count++;
+			va_end(args);
+			return (-1);
 		}
-		else if (*format == 'c')
+		switch (*format)
 		{
-		c = va_arg(format_list, int);
-		write(1, &c, 1);
-		count++;
+			case 'c':
+				length = length + print_char(va_arg(args, int));
+				break;
+			case 's':
+				length = length + print_string(va_arg(args, const char *));
+				break;
+			case '%':
+				length = length + print_char('%');
+				break;
+			default:
+				length = length + print_char(*format);
+				break;
 		}
-		else if (*format == 's')
-		{
-		string = va_arg(format_list, char *);
-		if (string == NULL)
-			string = "(null)";
-		write(1, string, strlen(string));
-		count = strlen(string) + count;
-		}
+	}
 		else
 		{
-			write(1, "%", 1);
-			write(1, format, 1);
-			count = 1 + 1;
+			length = length + print_char(*format);
 		}
+		format++;
 	}
-	format++;
-	}
-	va_end(format_list);
-	return (count);
+	va_end(args);
+	return (length);
 }

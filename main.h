@@ -1,7 +1,8 @@
-#ifndef main_h 
+#ifndef main_h
 #define main_h
 
 int _printf(const char *format, ...);
-int _putchar(char c);
+int print_char(char character);
+int print_string(const char *string);
 
 #endif
