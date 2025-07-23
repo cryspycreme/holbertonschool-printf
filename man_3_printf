@@ -1,0 +1,77 @@
+.Dd 23/07/25               \" DATE
+.Dt _PRINTF 3     \" Program name and manual section number
+.Os Darwin
+.Sh NAME                 \" Section Header - required - don't modify
+.Nm _printf
+.\" The following lines are read in generating the apropos(man -k) database. Use only key
+.\" words here as the database is built based on the words here and in the .ND line.
+.Sh DESCRIPTION
+.Nm
+is a custom implementation of the standard
+.Xr printf
+function in C.
+It writes output to the standard output stream based on a format string and a variable number of arguments.
+The following format specifiers are supported:
+.Bl -tag -width ".It %x"
+.It %c
+Prints a single character.
+.It %s
+Prints a string.
+.It %d
+Prints a signed decimal integer.
+.It %i
+Prints a signed decimal integer.
+.It %%
+Prints a literal percent sign.
+.El
+.Sh RETURN VALUES
+function returns the number of characters printed (excluding the null byte used to end output to strings).
+.Sh EXAMPLES
+The following examples demonstrate usage of
+.B _printf
+with various format specifiers:
+.TP
+.B _printf("Let's try to printf a simple sentence.\\n");
+Prints the sentence: "Let's try to printf a simple sentence."
+.TP
+.B _printf("Length:[%d, %i]\\n", 10, 10);
+Prints the length twice: "Length:[10, 10]"
+.TP
+.B _printf("Negative:[%d]\\n", -762534);
+Prints a negative signed integer: "Negative:[-762534]"
+.TP
+.B _printf("Character:[%c]\\n", 'H');
+Prints a single character: "Character:[H]"
+.TP
+.B _printf("String:[%s]\\n", "I am a string !");
+Prints a string: "String:[I am a string !]"
+.TP
+.B _printf("Percent:[%%]\\n");
+Prints a literal percent sign: "Percent:[%]"
+
+.Sh FILES
+.Pa _printf.c
+.Pa main.h
+.Pa print_specifiers.c
+.Sh SEE ALSO
+.Xr printf 3 ,
+.Xr write 2
+.Sh AUTHORS
+Developed by Holberton cohort 27 students: Crystal Chiam, Grâce Kayembe & Thannie Phan
+.Sh BUGS
+.Nm
+does not support several features of the standard
+.Xr printf 3
+function.
+.Bl -bullet -compact
+.It
+Does not reproduce the buffer handling of the C library
+.It
+Does not handle flag characters (such as '-', '+', '0', etc.)
+.It
+Does not handle field width (e.g., %5d)
+.It
+Does not handle precision (e.g., %.2f)
+.It
+Does not handle length modifiers (e.g., %ld, %hhx)
+.El
