@@ -1,7 +1,7 @@
 #include "main.h"
 #include <string.h> /*strlen*/
 #include <unistd.h> /*write*/
-
+#include <limits.h> /*handles lower limit of int type*/
 /**
  * print_char - prints a character
  *
@@ -45,6 +45,9 @@ int print_d(int number)
 {
 	int len = 0;
 
+	if (number == INT_MIN)
+	{
+		return print_string("-2147483648");
 	if (number < 0)
 	{
 		len = len + print_char('-');
