@@ -39,8 +39,10 @@ int _printf(const char *format, ...)
 				length = length + print_char('%');
 				break;
 			default:
-				length = length + print_char(*format);
-				break;
+                		write(1, "%", 1);
+                		write(1, format, 1);
+                		length = 1 + 1;
+                		break;
 		}
 	}
 		else
