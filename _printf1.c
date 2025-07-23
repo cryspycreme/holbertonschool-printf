@@ -29,10 +29,10 @@ int _printf1(const char *format, ...)
 			switch (*format) /*format specifier after % is evaluated*/
 			{
 				case 'd':
-					length = length + print_dec(va_arg(args, int));
+					length = length + print_d(va_arg(args, int));
 					break;
 				case 'i':
-					length = length + print_int(va_arg(args, int));
+					length = length + print_i(va_arg(args, int));
 					break;
 				default: /*if no cases match, run the default block*/
 					length = length + write(1, "%", 1);
