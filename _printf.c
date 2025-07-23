@@ -16,7 +16,6 @@ int _printf(const char *format, ...)
 	int length = 0;
 
 	va_start(args, format);
-
 	while (*format != '\0')
 	{
 		if (*format == '%')
@@ -39,10 +38,10 @@ int _printf(const char *format, ...)
 				length = length + print_char('%');
 				break;
 			default:
-                		write(1, "%", 1);
-                		write(1, format, 1);
-                		length = 1 + 1;
-                		break;
+				write(1, "%", 1);
+				write(1, format, 1);
+				length = 1 + 1;
+				break;
 		}
 	}
 		else
