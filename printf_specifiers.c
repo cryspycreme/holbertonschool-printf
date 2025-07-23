@@ -47,7 +47,8 @@ int print_d(int number)
 
 	if (number == INT_MIN)
 	{
-		return print_string("-2147483648");
+		return (print_string("-2147483648"));
+	}
 	if (number < 0)
 	{
 		len = len + print_char('-');
