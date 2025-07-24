@@ -59,12 +59,7 @@ Header files use include guards to prevent multiple inclusion.
 * Don’t forget to push your header file
 * All your header files should be include guarded
 
-### Compile
-Use the following command to compile
-```
-$ gcc -Wall -Werror -Wextra -pedantic -Wno-format *.c
-```
-### Authorized functions and Macros
+Authorized functions and Macros
 
 * write (man 2 write)
 * malloc (man 3 malloc)
@@ -74,6 +69,11 @@ $ gcc -Wall -Werror -Wextra -pedantic -Wno-format *.c
 * va_copy (man 3 va_copy)
 * va_arg (man 3 va_arg)
 
+### Compile
+All of the .c files along with the main.c files will be compiled with the below command on a sandbox.
+```
+$ gcc -Wall -Werror -Wextra -pedantic -Wno-format *.c
+```
 ## Project Tasks
 ### 0. Write a function that produces output according to a format.
 
