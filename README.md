@@ -47,7 +47,7 @@ Header files use include guards to prevent multiple inclusion.
 
 ### Macros
 
-#ifndef MAIN_H
+``` #ifndef MAIN_H
 #define MAIN_H
 
 int _printf(const char *format, ...);
@@ -57,7 +57,7 @@ int print_d(int number);
 int print_i(int number);
 
 #endif /* MAIN_H */
-
+```
 ### Variables
 
 int c;
