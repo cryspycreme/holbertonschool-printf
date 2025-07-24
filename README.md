@@ -45,7 +45,14 @@ Function and variable names are written in lowercase with underscores for readab
 The code follows the Betty coding style used in Holberton projects (consistent indentation, clear structure, and proper documentation).
 Header files use include guards to prevent multiple inclusion.
 
-### Macros
+### Authorized functions and Macros
+* write (man 2 write)
+malloc (man 3 malloc)
+free (man 3 free)
+va_start (man 3 va_start)
+va_end (man 3 va_end)
+va_copy (man 3 va_copy)
+va_arg (man 3 va_arg)
 
 ```
 #ifndef MAIN_H
