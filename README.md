@@ -1,4 +1,4 @@
-# A C File Templates
+# C File Templates
 
 ![Flowchart](https://i.postimg.cc/J0JN0bqm/Screenshot-2025-07-23-222350.jpg)
 
@@ -7,7 +7,7 @@ The _printf() function produces output according to a format string specified by
 
 It uses va_list to handle the variable arguments passed to it.
 
-## A Supported format specifiers:
+## Supported format specifiers:
 
 | Specifier | Description |
 | --- | --- |
@@ -20,13 +20,13 @@ It uses va_list to handle the variable arguments passed to it.
 ## Unknown specifiers
 If the format specifier is not recognized, it will just print the % character followed by the unknown specifier.
 
-## A Return Value 
+## Return Value 
 As it processes each format specifier or character, _printf keeps track of how many characters have been printed using a length variable.
 
 If the format string ends right after a % without a valid specifier, the function returns -1.
 Otherwise, it returns the total number of characters printed and calls va_end to clean up the argument list.
 
-## A Type of Files
+## Type of Files
 | Specifier | Description |
 | --- | --- |
 | _printf.c | This is where the _printf function is written. It goes through the format string, figures out which specifier is used, and handles each one. It also works with va_list to manage the arguments. |
@@ -35,7 +35,7 @@ Otherwise, it returns the total number of characters printed and calls va_end to
 | main.c | Used to test _printf. It has a main function with different _printf calls to check if everything works right compared to the regular printf. |
 | _putchar.c | This file has the _putchar function. It uses the write system call to print one character to the standard output. It’s used by other functions in the project to print characters without using the standard library. |
 
-## A Naming Conventions & Coding Style
+## Naming Conventions & Coding Style
 
 ### Prefixes and Functions
 
@@ -45,7 +45,7 @@ Function and variable names are written in lowercase with underscores for readab
 The code follows the Betty coding style used in Holberton projects (consistent indentation, clear structure, and proper documentation).
 Header files use include guards to prevent multiple inclusion.
 
-### A Macros
+### Macros
 
 #ifndef MAIN_H
 #define MAIN_H
@@ -58,7 +58,7 @@ int print_i(int number);
 
 #endif /* MAIN_H */
 
-### A Variables
+### Variables
 
 int c;
 int s;
@@ -70,7 +70,7 @@ void *addr;
 va_list args;
 int length = 0;
 
-## A Errors
+## Errors
 Returns -1 if the format string ends with % and no specifier after it.
 
 ### Examples
@@ -87,6 +87,6 @@ printf("Length:[%d, %i]\n", len2, len2);
 _printf("Negative:[%d]\n", -762534);
 printf("Negative:[%d]\n", -762534);
 
-## A Author
+## Author
 Made by Holberton Cohort 27 students:
 Crystal Chiam, Grâce Kayembe & Thannie Phan
