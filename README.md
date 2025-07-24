@@ -58,7 +58,12 @@ Header files use include guards to prevent multiple inclusion.
 * The prototypes of all your functions should be included in your header file called main.h
 * Don’t forget to push your header file
 * All your header files should be include guarded
-  
+
+### Compile
+Use the following command to compile
+```
+$ gcc -Wall -Werror -Wextra -pedantic -Wno-format *.c
+```
 ### Authorized functions and Macros
 
 * write (man 2 write)
