@@ -1,6 +1,6 @@
 # C File Templates
 
-![Flowchart](https://i.postimg.cc/J0JN0bqm/Screenshot-2025-07-23-222350.jpg)
+![Flowchart](https://i.postimg.cc/NfVhj1py/Screenshot-2025-07-23-222350.jpg)
 
 
 The _printf() function produces output according to a format string specified by format. It takes a variable number of arguments, with the first argument being a format string that specifies how the subsequent arguments should be formatted and printed.
