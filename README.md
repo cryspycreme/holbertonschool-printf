@@ -20,16 +20,16 @@ Prints a signed decimal integer.
 Prints a literal percent sign.
 
 
-Unknown specifiers
+## Unknown specifiers
 If the format specifier is not recognized, it will just print the % character followed by the unknown specifier.
 
-Return Value 
+## A Return Value 
 As it processes each format specifier or character, _printf keeps track of how many characters have been printed using a length variable.
 
 If the format string ends right after a % without a valid specifier, the function returns -1.
 Otherwise, it returns the total number of characters printed and calls va_end to clean up the argument list.
 
-Type of Files
+## A Type of Files
 
 File
 Description
@@ -44,10 +44,9 @@ Used to test _printf. It has a main function with different _printf calls to che
 _putchar.c
 This file has the _putchar function. It uses the write system call to print one character to the standard output. It’s used by other functions in the project to print characters without using the standard library.
 
+## A Naming Conventions & Coding Style
 
-Naming Conventions & Coding Style
-
-Prefixes and Functions
+### Prefixes and Functions
 
 All custom functions use the _ prefix to avoid conflicts with standard library functions (e.g., _printf, _putchar).
 Helper functions for specifiers are named based on what they handle, like print_char, print_string, or print_int.
@@ -55,7 +54,7 @@ Function and variable names are written in lowercase with underscores for readab
 The code follows the Betty coding style used in Holberton projects (consistent indentation, clear structure, and proper documentation).
 Header files use include guards to prevent multiple inclusion.
 
-Macros
+### A Macros
 
 #ifndef MAIN_H
 #define MAIN_H
@@ -68,7 +67,7 @@ int print_i(int number);
 
 #endif /* MAIN_H */
 
-Variables
+### A Variables
 
 int c;
 int s;
@@ -80,10 +79,10 @@ void *addr;
 va_list args;
 int length = 0;
 
-Errors
+## A Errors
 Returns -1 if the format string ends with % and no specifier after it.
 
-Examples
+### Examples
 
 len = _printf("Let's try to printf a simple sentence.\n");
 len2 = printf("Let's try to printf a simple sentence.\n");
@@ -97,6 +96,6 @@ printf("Length:[%d, %i]\n", len2, len2);
 _printf("Negative:[%d]\n", -762534);
 printf("Negative:[%d]\n", -762534);
 
-Author
+## A Author
 Made by Holberton Cohort 27 students:
 Crystal Chiam, Grâce Kayembe & Thannie Phan
