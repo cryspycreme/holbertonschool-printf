@@ -9,19 +9,13 @@ It uses va_list to handle the variable arguments passed to it.
 
 ## A Supported format specifiers:
 
-Specifier
-Description
-%c
-Prints a single character. Argument must be of type int.
-%s
-Prints a null-terminated string. Argument must be a const char *.
-%d
-Prints a signed decimal integer.
-%i
-Prints a signed decimal integer.
-%%
-Prints a literal percent sign.
-
+| Specifier | Description |
+| --- | --- |
+| %c | Prints a single character. Argument must be of type int. |
+| %s | Prints a null-terminated string. Argument must be a const char *. |
+| %d | Prints a signed decimal integer. |
+| %i | Prints a signed decimal integer. |
+| %% | Prints a literal percent sign. |
 
 ## Unknown specifiers
 If the format specifier is not recognized, it will just print the % character followed by the unknown specifier.
