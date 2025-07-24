@@ -74,7 +74,6 @@ $ gcc -Wall -Werror -Wextra -pedantic -Wno-format *.c
 * va_copy (man 3 va_copy)
 * va_arg (man 3 va_arg)
 
-```
 ## Project Tasks
 ### 0. Write a function that produces output according to a format.
 
@@ -100,6 +99,7 @@ You don’t have to handle precision
 You don’t have to handle the length modifiers
 
 ### Prototype Functions 
+```
 #ifndef MAIN_H
 #define MAIN_H
 
