@@ -4,8 +4,6 @@ The _printf() function produces output according to a format string specified by
 
 It uses va_list to handle the variable arguments passed to it.
 
-![Flowchart](https://i.postimg.cc/NfVhj1py/Screenshot-2025-07-23-222350.jpg)
-
 ## Supported format specifiers:
 
 | Specifier | Description |
@@ -43,6 +41,9 @@ Helper functions for specifiers are named based on what they handle, like print_
 Function and variable names are written in lowercase with underscores for readability.
 The code follows the Betty coding style used in Holberton projects (consistent indentation, clear structure, and proper documentation).
 Header files use include guards to prevent multiple inclusion.
+
+## FlowChart
+![Flowchart](https://i.postimg.cc/NfVhj1py/Screenshot-2025-07-23-222350.jpg)
 
 ## Project Requirements
 
