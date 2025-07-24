@@ -45,7 +45,7 @@ Function and variable names are written in lowercase with underscores for readab
 The code follows the Betty coding style used in Holberton projects (consistent indentation, clear structure, and proper documentation).
 Header files use include guards to prevent multiple inclusion.
 
-## Authorized functions
+## Project Requirements
 
 * Allowed editors: vi, vim, emacs
 * All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
