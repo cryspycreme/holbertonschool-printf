@@ -1,10 +1,10 @@
-C File Templates
+# A C File Templates
 
 The _printf() function produces output according to a format string specified by format. It takes a variable number of arguments, with the first argument being a format string that specifies how the subsequent arguments should be formatted and printed.
 
 It uses va_list to handle the variable arguments passed to it.
 
-Supported format specifiers:
+## A Supported format specifiers:
 
 Specifier
 Description
