@@ -56,7 +56,7 @@ Header files use include guards to prevent multiple inclusion.
 
 ### A Macros
 
-#ifndef MAIN_H
+`#ifndef MAIN_H
 #define MAIN_H
 
 int _printf(const char *format, ...);
@@ -65,7 +65,7 @@ int print_string(const char *string);
 int print_d(int number);
 int print_i(int number);
 
-#endif /* MAIN_H */
+#endif /* MAIN_H */`
 
 ### A Variables
 
