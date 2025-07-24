@@ -1,5 +1,8 @@
 # A C File Templates
 
+![https://i.postimg.cc/J0JN0bqm/Screenshot-2025-07-23-222350.jpg]
+
+
 The _printf() function produces output according to a format string specified by format. It takes a variable number of arguments, with the first argument being a format string that specifies how the subsequent arguments should be formatted and printed.
 
 It uses va_list to handle the variable arguments passed to it.
@@ -56,7 +59,7 @@ Header files use include guards to prevent multiple inclusion.
 
 ### A Macros
 
-`#ifndef MAIN_H
+#ifndef MAIN_H
 #define MAIN_H
 
 int _printf(const char *format, ...);
@@ -65,7 +68,7 @@ int print_string(const char *string);
 int print_d(int number);
 int print_i(int number);
 
-#endif /* MAIN_H */`
+#endif /* MAIN_H */
 
 ### A Variables
 
