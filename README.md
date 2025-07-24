@@ -47,7 +47,8 @@ Header files use include guards to prevent multiple inclusion.
 
 ### Macros
 
-``` #ifndef MAIN_H
+```
+#ifndef MAIN_H
 #define MAIN_H
 
 int _printf(const char *format, ...);
@@ -60,6 +61,7 @@ int print_i(int number);
 ```
 ### Variables
 
+```
 int c;
 int s;
 int len = 0;
@@ -69,12 +71,12 @@ unsigned int ui;
 void *addr;
 va_list args;
 int length = 0;
-
+```
 ## Errors
 Returns -1 if the format string ends with % and no specifier after it.
 
 ### Examples
-
+```
 len = _printf("Let's try to printf a simple sentence.\n");
 len2 = printf("Let's try to printf a simple sentence.\n");
 
@@ -86,7 +88,7 @@ printf("Length:[%d, %i]\n", len2, len2);
 
 _printf("Negative:[%d]\n", -762534);
 printf("Negative:[%d]\n", -762534);
-
+```
 ## Author
 Made by Holberton Cohort 27 students:
 Crystal Chiam, Grâce Kayembe & Thannie Phan
