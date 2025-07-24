@@ -29,12 +29,11 @@ Otherwise, it returns the total number of characters printed and calls va_end to
 ## A Type of Files
 | Specifier | Description |
 | --- | --- |
-| %c | Prints a single character. Argument must be of type int. |
-| %s | Prints a null-terminated string. Argument must be a const char *. |
-| %d | Prints a signed decimal integer. |
-| %i | Prints a signed decimal integer. |
-| %% | Prints a literal percent sign. |
-
+| _printf.c | This is where the _printf function is written. It goes through the format string, figures out which specifier is used, and handles each one. It also works with va_list to manage the arguments. |
+| printf_specifiers.c | Contains the functions that print things like characters, strings, and integers. Each function handles one type of format specifier (like %c, %s, %d, or %i).|
+| main.h | The header file. It has the function prototypes and the includes needed for the project. |
+| main.c | Used to test _printf. It has a main function with different _printf calls to check if everything works right compared to the regular printf. |
+| _putchar.c | This file has the _putchar function. It uses the write system call to print one character to the standard output. It’s used by other functions in the project to print characters without using the standard library. |
 
 ## A Naming Conventions & Coding Style
 
