@@ -1,7 +1,7 @@
 #include "main.h"
-#include <string.h> /*strlen*/
-#include <unistd.h> /*write*/
-#include <limits.h> /*handles lower limit of int type*/
+#include <string.h>
+#include <unistd.h>
+#include <limits.h>
 /**
  * print_char - prints a character
  *
@@ -14,7 +14,7 @@ int print_char(char character)
 	int c;
 
 	c = write(1, &character, 1);
-	return (c); /*as write prints but also returns the no. of bytes*/
+	return (c);
 }
 
 /**
