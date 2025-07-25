@@ -36,15 +36,8 @@ int _printf(const char *format, ...)
 				case '%':
 					length = length + print_char('%');
 					break;
-				case 'd':
-					length = length + print_d(va_arg(args, int));
-					break;
-				case 'i':
-					length = length + print_i(va_arg(args, int));
-					break;
 				default:
-					length = length + write(1, "%", 1);
-					length = length + write(1, format, 1);
+					length = length + write(1, "%", 1) + write(1, format, 1);
 			}
 		}
 		else
