@@ -24,7 +24,7 @@ If the format string ends right after a % without a valid specifier, the functio
 Otherwise, it returns the total number of characters printed and calls va_end to clean up the argument list.
 
 ## Type of Files
-| Specifier | Description |
+| File name | Description |
 | --- | --- |
 | _printf.c | This is where the _printf function is written. It goes through the format string, figures out which specifier is used, and handles each one. It also works with va_list to manage the arguments. |
 | printf_specifiers.c | Contains the functions that print things like characters, strings, and integers. Each function handles one type of format specifier (like %c, %s, %d, or %i).|
