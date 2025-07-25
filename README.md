@@ -43,7 +43,7 @@ The code follows the Betty coding style used in Holberton projects (consistent i
 Header files use include guards to prevent multiple inclusion.
 
 ## FlowChart
-![Flowchart](https://i.postimg.cc/NfVhj1py/Screenshot-2025-07-23-222350.jpg)
+![Flowchart](https://i.postimg.cc/hGLkDvCN/Flowchart-01.jpg)
 
 ## Project Requirements
 
