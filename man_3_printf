@@ -12,6 +12,7 @@ is a custom implementation of the standard
 function in C.
 It writes output to the standard output stream based on a format string and a variable number of arguments.
 The following format specifiers are supported:
+
 .Bl -tag -width ".It %x"
 .It %c
 Prints a single character.
