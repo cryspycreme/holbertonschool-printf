@@ -30,21 +30,27 @@ function returns the number of characters printed (excluding the null byte used 
 The following examples demonstrate usage of
 .B _printf
 with various format specifiers:
+
 .TP
 .B _printf("Let's try to printf a simple sentence.\\n");
 Prints the sentence: "Let's try to printf a simple sentence."
+
 .TP
 .B _printf("Length:[%d, %i]\\n", 10, 10);
 Prints the length twice: "Length:[10, 10]"
+
 .TP
 .B _printf("Negative:[%d]\\n", -762534);
 Prints a negative signed integer: "Negative:[-762534]"
+
 .TP
 .B _printf("Character:[%c]\\n", 'H');
 Prints a single character: "Character:[H]"
+
 .TP
 .B _printf("String:[%s]\\n", "I am a string !");
 Prints a string: "String:[I am a string !]"
+
 .TP
 .B _printf("Percent:[%%]\\n");
 Prints a literal percent sign: "Percent:[%]"
